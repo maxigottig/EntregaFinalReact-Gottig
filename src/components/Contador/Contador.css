@@ -1,0 +1,31 @@
+.Counter {
+    border: 1px solid black;
+    padding: 7px;
+    }
+    
+    .CounterValue{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .CounterValue button{
+    width: 5%;
+    }
+    
+    .CounterValue p {
+        width: 10%;
+        text-align: center;
+    }
+    
+    .BuyOrEmpty {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .BuyOrEmpty button {
+        width: 20%;
+        color: white;
+        background-color: rgb(64, 26, 92);
+    }
