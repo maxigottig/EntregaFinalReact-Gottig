@@ -1,21 +1,9 @@
-.Header {
+.header-container {
 	display: flex;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0, 0, 26) 0%, rgb(8, 0, 83) 100%);
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	min-height: 35vh;
+	height: 300px;
 	width: 100%;
-	background: rgb(2, 0, 36);
-	background: linear-gradient(
-		90deg,
-		rgba(2, 0, 36, 1) 0%,
-		rgb(202, 74, 0) 0%,
-		rgba(1, 13, 1, 1) 100%,
-		rgba(0, 0, 0, 1) 100%
-	);
-	color: white;
-}
-
-.Header h1 {
-	font-size: 44px;
 }

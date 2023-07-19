@@ -1,31 +1,45 @@
-import './App.css'
-import Navbar from "./components/NavBar/NavBar"
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import ItemListContainerPage from './components/pages/ItemListContainerPage'
-import AboutPage from './components/pages/AboutPage'
-import ItemDetailContainerPage from './components/pages/ItemDetailContainerPage'
-import Header from "./components/Header/Header"
+import "./App.css";
 
+// React Router Dom
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function App() {
+// Pages
+import HomePage from "./pages/Home/HomePage";
+import AboutPage from "./pages/About/AboutPage";
+import ContactPage from "./pages/Contact/ContactPage";
+import ShopPage from "./pages/Shop/ShopPage";
+import ItemDetailPage from "./pages/ItemDetailPage/ItemDetailPage";
+import CelularModelosPage from "./pages/CelularModelos/CelularModelosPage";
 
+// CONTEXT
+import { CelularesProvider } from "./context/CelularesContext";
 
+// COMPONENTS
+import Header from "./components/Header/Header";
+import ResponsiveNavigation from "./components/ResponsiveNavigation/ResponsiveNavigation";
+
+const App = () => {
   return (
-    <>
     <Router>
-    <Header />
-    <Navbar></Navbar>
-    
-    <Routes>
-    <Route path = "/" element={<ItemListContainerPage/>} />
-    <Route path = "/category/:category" element={<ItemListContainerPage />} />
-    <Route path = "/about" element={<AboutPage />} />
-    <Route path = "/item/:id" element={<ItemDetailContainerPage/>} />
-    </Routes>
-
-    </Router>    
-    </>
+      <CelularesProvider>
+        <div className="App">
+          <Header />
+          <ResponsiveNavigation />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/item-detail/:id" element={<ItemDetailPage />} />
+            <Route
+              path="/player-position/:position"
+              element={<CelularModelosPage />}
+            />
+          </Routes>
+        </div>
+      </CelularesProvider>
+    </Router>
   );
 };
 
-export default App
+export default App;
