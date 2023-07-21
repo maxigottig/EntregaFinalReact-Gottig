@@ -12,9 +12,9 @@ const AboutPage = () => {
         color: "white",
       }}
     >
-      <h1>About</h1>
+      <h1>Servicio Técnico</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, sit?
+        Servicio técnico autorizado
       </p>
     </div>
   );

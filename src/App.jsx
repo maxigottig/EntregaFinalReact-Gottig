@@ -30,11 +30,8 @@ const App = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/shop" element={<ShopPage />} />
-            <Route path="/item-detail/:id" element={<ItemDetailPage />} />
-            <Route
-              path="/player-position/:position"
-              element={<CelularModelosPage />}
-            />
+            <Route path="/celular-detail/:id" element={<ItemDetailPage />} />            
+            <Route path="/modelo/:modelo" element={<CelularModelosPage />} />
           </Routes>
         </div>
       </CelularesProvider>

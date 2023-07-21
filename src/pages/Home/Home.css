@@ -1,6 +1,10 @@
 .HomeContainer {
+	display: grid;
 	width: 90%;
 	display: flex;
 	justify-content: center;
 	margin: 25px
+	
 }
+
+	

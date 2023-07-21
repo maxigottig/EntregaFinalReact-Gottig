@@ -12,24 +12,24 @@ const CardCelulares = ({celular}) => {
         <CardMedia
           component="img"
           image={celular.img}
-          alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {celular.celular}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {celular.modelo} | {celular.number}
+            {celular.modelo} | {celular.precio}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          Comprar
         </Button>
       </CardActions>
     </Card>
   );
-}
+};
+
 
 export default CardCelulares;
