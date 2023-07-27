@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBnsvDZgxpzufaHLC6zchVsDndudI9ljDI",
+    apiKey: import.meta.env.VITE_API_KEY,
     authDomain: "motorola-react.firebaseapp.com",
     projectId: "motorola-react",
     storageBucket: "motorola-react.appspot.com",

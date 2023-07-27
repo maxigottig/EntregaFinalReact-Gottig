@@ -1,42 +1,43 @@
-import "./App.css";
-
-// React Router Dom
+import { Header } from "./components/Header/Header";
+import './App.css';
+import { Footer } from "./components/Footer/Footer";
+import Box from "@mui/material/Box";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/HomePage"
+import { ErrorPage } from "./pages/ErrorPage";
+import { ByCategoryItemContainerPage } from "./pages/CategoryPage";
+import { ItemDetailPage } from "./pages/ItemDetailPage";
+import { ItemsProvider } from "./context/ItemsContext";
+import { CartPage } from "./pages/CartPage";
+import { CheckoutPage } from "./pages/CheckoutPage";
 
-// Pages
-import HomePage from "./pages/Home/HomePage";
-import AboutPage from "./pages/About/AboutPage";
-import ContactPage from "./pages/Contact/ContactPage";
-import ShopPage from "./pages/Shop/ShopPage";
-import ItemDetailPage from "./pages/ItemDetailPage/ItemDetailPage";
-import CelularModelosPage from "./pages/CelularModelos/CelularModelosPage";
+export const App = () => {
 
-// CONTEXT
-import { CelularesProvider } from "./context/CelularesContext";
 
-// COMPONENTS
-import Header from "./components/Header/Header";
-import ResponsiveNavigation from "./components/ResponsiveNavigation/ResponsiveNavigation";
-
-const App = () => {
   return (
-    <Router>
-      <CelularesProvider>
-        <div className="App">
+    <Box
+      sx={{
+
+        margin: "0 auto", // Centrar el contenido horizontalmente
+      }}
+    >
+      <ItemsProvider>
+        <Router>
           <Header />
-          <ResponsiveNavigation />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/shop" element={<ShopPage />} />
-            <Route path="/celular-detail/:id" element={<ItemDetailPage />} />            
-            <Route path="/modelo/:modelo" element={<CelularModelosPage />} />
+            <Route path="/item-detail/:id" element={<ItemDetailPage />} />
+            <Route
+              path="/category/:category"
+              element={<ByCategoryItemContainerPage />}
+            />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
-        </div>
-      </CelularesProvider>
-    </Router>
+          <Footer />
+        </Router>
+      </ItemsProvider>
+    </Box>
   );
 };
-
-export default App;

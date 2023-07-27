@@ -1,9 +1,0 @@
-.header-container {
-	display: flex;
-	background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0, 0, 26) 0%, rgb(8, 0, 83) 100%);
-	justify-content: center;
-	align-items: center;
-	height: 300px;
-	width: 100%;
-}

@@ -1,7 +1,0 @@
-.ModeloContainer {
-	display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-	justify-content: center;
-	margin: 25px;
-    gap: 25px;
-}

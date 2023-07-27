@@ -1,18 +1,9 @@
-import React from "react";
-import "./Header.css";
+import { NavBar } from "./NavBar"
 
-import { Link } from "react-router-dom";
-
-import logo from "./logo.png";
-
-const Header = () => {
+export const Header = () => {
   return (
-    <div className="header-container">
-      <Link to="/">
-        <img src={logo} alt="poster" width={400} />
-      </Link>
-    </div>
-  );
-};
-
-export default Header;
+    
+      <NavBar/>
+  
+  )
+}
