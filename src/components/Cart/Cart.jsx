@@ -58,21 +58,43 @@ export const Cart = () => {
     });
   };
 
-  const deleteItems = (itemId) => {
+  /*const deleteItems = (itemId) => {
     setItemCounts((prevItemCounts) => {
       const updatedCounts = {
         ...prevItemCounts,
         [itemId]: 0,
       };
       return updatedCounts;
-    });
-  
-    setItems((prevItems) => {
+    });*/
+    
+    const deleteItems = (itemId) => {
+      setItemCounts((prevItemCounts) => {
+        const updatedCounts = {
+          ...prevItemCounts,
+          [itemId]: 0,
+        };
+        return updatedCounts;
+      });
+    
+      setItems((prevItems) => {
+        const updatedItems = prevItems.filter((item) => item[0].id !== itemId);
+        return updatedItems;
+      });
+    };
+
+
+    /*setItems((prevItems) => {
       const updatedItems = prevItems.filter((item) => item[0].id !== itemId);
       return updatedItems;
     });
-  };
+  };*/
   
+  useEffect(() => {
+    const updatedItems = uniqueItems.flatMap(({ item, count }) =>
+      Array.from({ length: count }, () => [item[0], item[1]])
+    );
+    setItems(updatedItems);
+  }, [itemCounts]);
 
   const totalPrice = uniqueItems.reduce((total, { item }) => {
   
@@ -88,7 +110,7 @@ export const Cart = () => {
     setItemsCount(itemCounts);
   }, [itemCounts]);
 
-
+  
   return (
     <div className="bg-greycustom">
       <div className="d-flex justify-content-center pt-4 mb-5 hover-right ">
@@ -147,7 +169,7 @@ export const Cart = () => {
 
                     <Col md={1} className="align-items-center d-flex">
                       <span className="x px-2" onClick={() => deleteItems(item[0].id)}>
-                      <i className="bi bi-trash" ></i>
+                      <li><a href="">Quitar</a></li>
                       </span>
                     </Col>
                   </Row>
