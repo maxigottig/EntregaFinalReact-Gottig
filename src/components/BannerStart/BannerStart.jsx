@@ -15,7 +15,7 @@ export const BannerStart = () => {
 
     <Col><Button variant="light" size="sm" className="px-4 mt-2" >
       <Link
-        to={`/item-detail/enFii7O8j7QpI58J9s9s`}
+        to={`/item-detail/HA5q005jmjkNuLdf8bgv`}
         style={{ textDecoration: "none" }}
         key=""
       >

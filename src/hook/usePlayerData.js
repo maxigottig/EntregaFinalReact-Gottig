@@ -8,7 +8,7 @@ export const usePlayerData = () => {
 
   const [isLoading, setIsLoading] = useState(true);
 
-  const { category = 'Edge' } = useParams();
+  const { category = 'Phones' } = useParams();
 
   const { id } = useParams();
 

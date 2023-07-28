@@ -18,4 +18,3 @@ export const ItemsProvider = ({ children }) => {
     </ItemsContext.Provider>
   );
 };
-

@@ -9,7 +9,7 @@ export const ItemCard = ({ itemsByCategory, idx }) => {
 
   const dataid = itemsByCategory[idx]?.id
 
-  const offer = (itemsByCategory[idx]?.inOffer) ? (itemsByCategory[idx].price / 2).toFixed(2) : itemsByCategory[idx].price
+  const offer = (itemsByCategory[idx]?.inOffer) ? (itemsByCategory[idx].price / 2).toFixed(2) : itemsByCategory[idx].price;
 
   const buynow = (<Row className="align-self-end flex-column my-2">
     <Col className="f-14px text-muted"><small >{itemsByCategory[idx]?.description.split(' ').slice(0, 10).join(' ')}</small></Col>

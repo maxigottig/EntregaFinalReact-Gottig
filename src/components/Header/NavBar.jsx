@@ -15,7 +15,7 @@ export const NavBar = () => {
     setExpanded(!expanded);
   };
 
-  const categories = ['Edge', 'Moto-G', 'Moto-E', 'Offers']
+  const categories = ['Accessories', 'Offers']
 
   return (
     <>

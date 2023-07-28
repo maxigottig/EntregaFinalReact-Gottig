@@ -145,7 +145,7 @@ export const Cart = () => {
                       </div>
                     </Col>
 
-                    <Col md={1} className="align-items-center d-flex ">
+                    <Col md={1} className="align-items-center d-flex">
                       <span className="x px-2" onClick={() => deleteItems(item[0].id)}>
                       <i className="bi bi-trash" ></i>
                       </span>
