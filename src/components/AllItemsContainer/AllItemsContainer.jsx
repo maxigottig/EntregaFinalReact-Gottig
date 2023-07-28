@@ -71,7 +71,7 @@ export const AllItemsContainer = ({ isLoading, itemsByCategory }) => {
                             <div className="arrow-container2">
                                 <i className="bi bi-chevron-left"></i>
                             </div>
-                            <span className="hold">View all</span>
+                            <span className="hold">Ver todos</span>
 
                         </div>
                     </Link>
@@ -85,11 +85,11 @@ export const AllItemsContainer = ({ isLoading, itemsByCategory }) => {
                 <Row >
                     <Col xs={12} sm={3} className="d-none d-sm-block d-lg-block">
 
-                        <div > Filters</div>
+                        <div > Filtro</div>
                     </Col>
 
                     <Col xs={12} sm={12} md={8}>
-                        <small className="fs-6"> Rank by Recommended</small>
+                        <small className="fs-6"> Más recomendados</small>
                         <RenderPlayers isLoading={isLoading} itemsByCategory={itemsByCategory} />
                     </Col>
                 </Row>

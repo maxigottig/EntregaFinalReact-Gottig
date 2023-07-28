@@ -96,9 +96,9 @@ export const ItemCardDetail = ({ itemsByCategory, idx }) => {
 
         <Col md={6} className="d-flex">
 
-          <Button variant="dark" className=" py-4 px-5 " style={{ width: '30vh' }} onClick={() => setfun()}>Add to cart</Button>
+          <Button variant="dark" className=" py-4 px-5 " style={{ width: '30vh' }} onClick={() => setfun()}>Agregar al carrito</Button>
 
-          <Link to="/cart"><Button variant="danger" className="py-4 px-5  " style={{ width: '30vh' }}>Buy now</Button>  </Link>
+          <Link to="/cart"><Button variant="danger" className="py-4 px-5  " style={{ width: '30vh' }}>Comprar ahora</Button>  </Link>
 
         </Col>
 

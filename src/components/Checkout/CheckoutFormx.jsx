@@ -132,7 +132,7 @@ export const CheckoutForm = () => {
 
       <Form className="FormContainer mt-3" onSubmit={onSubmit}>
         <Form.Group className="mb-3">
-          <div className="fs-3 text-start mx-2 mb-4">Contact Information</div>
+          <div className="fs-3 text-start mx-2 mb-4">Información de contacto</div>
           <Form.Control
             type="text"
             placeholder="Email Address *"
@@ -165,7 +165,7 @@ export const CheckoutForm = () => {
             </div>
           )}
           <hr className="my-4" />
-          <div className="fs-3 text-start mx-2 mb-4">Shipping Information</div>
+          <div className="fs-3 text-start mx-2 mb-4">Información de envío</div>
         </Form.Group>
 
         <Form.Group className="mb-3" >
@@ -235,15 +235,15 @@ export const CheckoutForm = () => {
 
         <Modal show={showModal} onHide={handleCloseModal} centered>
           <Modal.Header closeButton>
-            <Modal.Title>Thank you for your purchase! </Modal.Title>
+            <Modal.Title>Muchas gracias por su compra! </Modal.Title>
           </Modal.Header>
           <Modal.Body style={{ backgroundColor: "green", color: "whitesmoke" }}>
-            <span>Your purchase ID is:</span>
+            <span>Su ID de compra es:</span>
             <h4>{purchaseID}</h4>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleCloseModal} >
-              <Link to='/' style={{ textDecoration: 'none' }}> Go to Home</Link>
+              <Link to='/' style={{ textDecoration: 'none' }}> Ir al HomePage</Link>
             </Button>
           </Modal.Footer>
         </Modal>

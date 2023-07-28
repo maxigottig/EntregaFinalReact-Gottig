@@ -35,7 +35,7 @@ export const ItemListContainer = ({ isLoading, itemsByCategory }) => {
 
       >
         <div className="d-flex justify-content-center mt-4 mb-5 hover-right">
-          <span className="hold">View all</span>
+          <span className="hold">Ver todo</span>
           <div className="arrow-container1">
             <i className="bi bi-chevron-right"></i>
           </div>
