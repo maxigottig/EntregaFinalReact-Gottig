@@ -27,7 +27,7 @@ export const BuyButton = ({ isHovered, data }) => {
   return (
     <Row className="align-self-end flex-column my-2">
       <Col className="my-2 h5">{data.name.split(' ').slice(0, 4).join(' ')}</Col>
-      <Col><small style={{color:'red'}}>{ ((data?.inOffer) ? 'Up to 50% OFF'  : '')}</small></Col>
+      <Col><small style={{color:'red'}}>{ ((data?.inOffer) ? 'Descuento del 50%'  : '')}</small></Col>
       <Col>{buttonText}</Col>
     </Row>
   );

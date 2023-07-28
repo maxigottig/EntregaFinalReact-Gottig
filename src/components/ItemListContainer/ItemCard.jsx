@@ -13,7 +13,7 @@ export const ItemCard = ({ itemsByCategory, idx }) => {
 
   const buynow = (<Row className="align-self-end flex-column my-2">
     <Col className="f-14px text-muted"><small >{itemsByCategory[idx]?.description.split(' ').slice(0, 10).join(' ')}</small></Col>
-    <small className="f-14px mt-2" style={{color:'red'}}>{ ((itemsByCategory[idx]?.inOffer) ? 'Up to 50% OFF'  : '')}</small>
+    <small className="f-14px mt-2" style={{color:'red'}}>{ ((itemsByCategory[idx]?.inOffer) ? 'Descuento del 50%'  : '')}</small>
     <Col className="h4 mb-2">${offer}<small className='text-decoration-line-through text-muted h6'> { ((itemsByCategory[idx]?.inOffer) ? '$' + itemsByCategory[idx].price : '')}</small></Col>
 
     <Col>

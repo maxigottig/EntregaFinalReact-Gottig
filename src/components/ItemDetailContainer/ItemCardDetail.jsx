@@ -18,7 +18,7 @@ export const ItemCardDetail = ({ itemsByCategory, idx }) => {
     <Row className="align-self-end  flex-column my-2 w-100 ">
 
 
-      <Col><small style={{ color: 'red' }}>{((data?.inOffer) ? 'Up to 50% OFF' : '')}</small></Col>
+      <Col><small style={{ color: 'red' }}>{((data?.inOffer) ? 'Descuento del 50%' : '')}</small></Col>
       <Col className="h4 my-2">$ {offer} <small className='text-decoration-line-through text-muted h6'>  { ((data?.inOffer) ? '$' + data.price : '')}</small></Col>
       <Col>
         <Link
