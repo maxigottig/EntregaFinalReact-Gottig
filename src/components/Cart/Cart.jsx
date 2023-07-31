@@ -75,6 +75,16 @@ export const Cart = () => {
         };
         return updatedCounts;
       });
+
+      /*const deleteItems = (itemId) => {
+        setItemCounts((prevItemCounts)=>
+          prevItemCounts.map((item)=>
+          item.id === itemId
+          ? { ...item, quantity: Math.max(1, item.quantity -1)}
+          : item
+          )
+        );
+      };*/
     
       setItems((prevItems) => {
         const updatedItems = prevItems.filter((item) => item[0].id !== itemId);
@@ -169,7 +179,7 @@ export const Cart = () => {
 
                     <Col md={1} className="align-items-center d-flex">
                       <span className="x px-2" onClick={() => deleteItems(item[0].id)}>
-                      <li><a href="">Quitar</a></li>
+                        <li className="trash"><a href="">Quitar</a></li>
                       </span>
                     </Col>
                   </Row>

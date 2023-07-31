@@ -86,3 +86,10 @@
   font-weight: 700;
 }*/
   
+.trash{
+  display: flex;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 30;
+  text-decoration: none;
+}
