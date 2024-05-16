@@ -7,3 +7,5 @@ Este repositorio es un ejemplo de ecommerce con productos de Motorola desarrolla
  - Para instalar las dependecias  del proyecto debe escribir en la consola: `npm install`
  - Y luego para iniciar en el proyecto ejecutar: `npm run dev`
  - Ir a http://localhost:5173/
+
+- Plan B: entrar directamente al link del sitio, alojado en Netlify: https://simulacroecommercemoto.netlify.app/
